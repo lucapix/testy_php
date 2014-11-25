@@ -9,7 +9,7 @@
 
 require "dbConnect.php";
 
-connection();
+connection($dbHost, $dbUser, $dbPass);
 
 
 ?>

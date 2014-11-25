@@ -8,13 +8,13 @@
 
 require "config.php";
 
-function connection()
+function connection($dbHost, $dbUser, $dbPass)
 {
-    @mysql_connect($dbHost, $dbUser, $dbPass)
+    mysql_connect($dbHost, $dbUser, $dbPass)
     or die('Brak połączenia z serwerem MySQL.' . " " . mysql_error());
     echo "połączenie zostało ustanowione";
 
-    @mysql_select_db('test')
+    mysql_select_db('test')
     or die('<br>połaczenie z bazą nie jest mozliwe.<br> Bład: ' . "" . mysql_error());
     echo "<br>jest połączenie";
 
